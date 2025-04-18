@@ -11,12 +11,22 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    formationController.addFormation(req, res);
-  });
+  formationController.addFormation(req, res);
+});
 
-  router.get("/:id", (req, res) => {
-    formationController.getFormationById(req, res);
-    });
-    
+router.get("/:id", (req, res) => {
+  formationController.getFormationById(req, res);
+});
+
+router.put("/:id", (req, res) => {
+  formationController.updateFormation(req, res);
+});
+
+router.delete("/:id", (req, res) => {
+  formationController.deleteFormation(req, res);
+});
+
 module.exports = router;
 // on exporte le router
+
+

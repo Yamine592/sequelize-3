@@ -15,6 +15,14 @@ class formationService {
   async getFormationById(id) { // on declare la fonction getFormationById
     return await formations.findByPk(id); // on renvoie la formation par son id
     }
+    async updateFormation(formation,id) { // on declare la  fonction updateFormation
+      return await formations.update({...formation},{ where: { id_formation: id } }); // on renvoie la formation mise à jour
+      }
+
+      async deleteFormation(id) { // on declare la fonction deleteFormation
+        return await formations.destroy({ where: {id_formation: id } }); // on renvoie la formation supprimée
+        }
+        
 }
 module.exports = new formationService();
 // on exporte le service stagiaire

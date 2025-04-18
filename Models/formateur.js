@@ -12,7 +12,6 @@ formateur.init(
       type: DataTypes.INTEGER, // on declare le type de données
       primaryKey: true, // on declare la clé primaire
       autoIncrement: true, // on declare l'auto increment
-      allowNull: false, // on declare le champ comme non nul
     },
     nom: {
       type: DataTypes.STRING(255),
